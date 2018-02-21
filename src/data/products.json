@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Kitty Thinks Blog",
+    "url": "https://www.kittythinks.com",
+    "status": "Live",
+    "description": "Concise summaries of important literature",
+    "notes": ["Deployed with and hosted on Netlify", "Built with the Hugo framework"]
+  },
+  {
+    "name": "Super Detailed",
+    "url": null,
+    "status": "Coming soon!",
+    "description": "A better Superannuation comparison service",
+    "notes": [
+      "Being built with Express, MongoDB, React, GraphQL, Apollo",
+      "Being hosted on Amazon Web Services"
+    ]
+  }
+]

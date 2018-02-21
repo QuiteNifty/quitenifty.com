@@ -1,0 +1,21 @@
+[
+  {
+    "shortName": "Kitty",
+    "longName": "Kitty Zschoche",
+    "roles": ["Usability and User Experience", "Product Management"],
+    "twitter": {
+      "handle": "@meowmuch",
+      "url": "https://twitter.com/meowmuch"
+    }
+  },
+  {
+    "shortName": "Matt",
+    "longName": "Matt Schultz",
+    "roles": ["Development"],
+    "twitter": {
+      "handle": "@mttschltz",
+      "url": "https://twitter.com/mttschltz"
+    },
+    "linkedin": "https://www.linkedin.com/in/mttschltz/"
+  }
+]
