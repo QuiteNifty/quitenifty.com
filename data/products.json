@@ -4,7 +4,8 @@
     "url": "https://www.kittythinks.com",
     "status": "Live",
     "description": "Concise summaries of important literature",
-    "notes": ["Deployed with and hosted on Netlify", "Built with the Hugo framework"]
+    "notes": ["Deployed with and hosted on Netlify", "Built with the Hugo framework"],
+    "logo": "./kittythinks.png"
   },
   {
     "name": "Super Detailed",

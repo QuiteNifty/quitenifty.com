@@ -1,4 +1,3 @@
-import Link from 'gatsby-link';
 import React from 'react';
 
 const Person = ({ person }) => (
@@ -20,7 +19,7 @@ const Twitter = ({ twitter }) => {
   if (twitter) {
     return (
       <li>
-        Twitter: <Link to={twitter.url}>{twitter.handle}</Link>
+        Twitter: <a href={twitter.url}>{twitter.handle}</a>
       </li>
     );
   }
@@ -31,7 +30,7 @@ const LinkedIn = ({ linkedin }) => {
   if (linkedin) {
     return (
       <li>
-        <Link to={linkedin}>LinkedIn</Link>
+        <a href={linkedin}>LinkedIn</a>
       </li>
     );
   }

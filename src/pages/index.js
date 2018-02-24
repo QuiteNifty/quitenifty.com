@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Header from '../components/Header';
 import Company from '../components/Company';
 import People from '../components/People';
 import Products from '../components/Products';
@@ -7,7 +8,7 @@ import Products from '../components/Products';
 
 const IndexPage = ({ data }) => (
   <div>
-    <h1>{data.site.siteMetadata.title}</h1>
+    <Header title={data.site.siteMetadata.title} url={data.site.siteMetadata.siteUrl} />
     <Products products={data.allProductsJson.edges} />
     <People people={data.allPeopleJson.edges} />
     <Company company={data.allCompanyJson.edges[0].node} />
@@ -20,6 +21,7 @@ export const query = graphql`
       siteMetadata {
         title
         slogan
+        siteUrl
       }
     }
     allPeopleJson {
@@ -44,6 +46,7 @@ export const query = graphql`
           status
           description
           notes
+          logo
         }
       }
     }

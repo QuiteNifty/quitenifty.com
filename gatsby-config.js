@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Quite Nifty',
-    slogan: 'Nifty products. Quite well made.'
+    slogan: 'Nifty products. Quite well made.',
+    siteUrl: 'https://www.quitenifty.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -18,6 +19,7 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography.js`
       }
-    }
+    },
+    'gatsby-plugin-styled-components'
   ]
 };

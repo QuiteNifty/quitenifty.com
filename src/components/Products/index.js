@@ -1,11 +1,18 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import styled from 'styled-components';
 import Product from './Product';
+import { SectionHeading } from '../styled';
+
+const ProductContainer = styled.div`
+  display: flex;
+`;
 
 const Products = props => (
   <div>
-    <h2>Products</h2>
-    {props.products.map(({ node }, index) => <Product product={node} />)}
+    <SectionHeading>Products</SectionHeading>
+    <ProductContainer>
+      {props.products.map(({ node }, index) => <Product product={node} />)}
+    </ProductContainer>
   </div>
 );
 
