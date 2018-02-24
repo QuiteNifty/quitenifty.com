@@ -4,6 +4,7 @@ import * as theme from '../theme';
 import { rhythm } from '../../utils/typography';
 import Status from './Status';
 
+import wrench from '../../img/wrench.svg';
 const productPath = require.context('./', true);
 const imgPath = require.context('../../img', true);
 
@@ -50,8 +51,11 @@ const Image = styled.img`
   display: block;
   width: 100%;
   max-width: 12rem;
+  height: 100%;
+  max-height: 12rem;
   margin: 0 auto;
 `;
+const SvgImage = Image.withComponent('svg');
 
 const ProductName = styled.h3`
   margin: ${rhythm(1)} 0 0;
@@ -61,7 +65,7 @@ const Description = styled.p`
   margin: ${rhythm(0.5)} 0 ${rhythm(1)};
 `;
 
-const Product = ({product}) => (
+const Product = ({ product }) => (
   <Outer product={product}>
     <Logo product={product} />
     <ProductName>{product.name}</ProductName>
@@ -79,11 +83,15 @@ const Outer = props => {
   }
 };
 
-const Logo = ({product}) => {
+const Logo = ({ product }) => {
   if (product.logo) {
     return <Image src={productPath(product.logo, true)} />;
   } else {
-    return <Image src={imgPath('./wrench.svg', true)} />;
+    return (
+      <SvgImage>
+        <use xlinkHref={`#${wrench.id}`} />
+      </SvgImage>
+    );
   }
 };
 

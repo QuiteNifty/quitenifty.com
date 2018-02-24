@@ -8,6 +8,7 @@
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-styled-components": "^2.0.7",
+    "gatsby-plugin-svg-sprite": "^1.0.0",
     "gatsby-plugin-typography": "^1.7.14",
     "gatsby-source-filesystem": "^1.5.19",
     "gatsby-transformer-json": "^1.0.14",

@@ -20,6 +20,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`
       }
     },
-    'gatsby-plugin-styled-components'
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-svg-sprite'
   ]
 };

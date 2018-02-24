@@ -4,12 +4,20 @@ import styled from 'styled-components';
 import { color } from '../theme';
 import { rhythm } from '../../utils/typography';
 
+import linkIntact from '../../img/link-intact.svg';
+import beaker from '../../img/beaker.svg';
+
 const imgPath = require.context('../../img', true);
 
-const Icon = styled.img`
+const Icon = styled.svg`
+  width: 0.8rem;
+  height: 0.8rem;
   margin: 0 ${rhythm(0.25)} 0 0;
   vertical-align: middle;
-  color: ${color.darkgrey};
+
+  > use {
+    fill: ${color.darkgrey};
+  }
 `;
 
 const Text = styled.span`
@@ -20,14 +28,18 @@ const Status = ({ product }) => {
   if (product.url) {
     return (
       <div>
-        <Icon src={imgPath('./link-intact.svg', true)} />
+        <Icon>
+          <use xlinkHref={`#${linkIntact.id}`} />
+        </Icon>
         <Text>{product.url}</Text>
       </div>
     );
   } else {
     return (
       <div>
-        <Icon src={imgPath('./beaker.svg', true)} />
+        <Icon>
+          <use xlinkHref={`#${beaker.id}`} />
+        </Icon>
         <Text>{product.status}</Text>
       </div>
     );
