@@ -5,6 +5,7 @@ import { SectionHeading } from '../styled';
 
 const ProductContainer = styled.div`
   display: flex;
+  justify-content: space-between;
 `;
 
 const Products = props => (

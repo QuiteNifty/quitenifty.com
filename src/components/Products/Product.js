@@ -14,7 +14,7 @@ const StyledProduct = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: calc(50% - ${rhythm(1)});
   padding: ${rhythm(1.5)};
 
   &:before,
@@ -55,7 +55,7 @@ const ProductName = styled.h3`
 `;
 
 const Description = styled.p`
-  margin: ${rhythm(0.5)} 0 ${rhythm(1)};
+  margin: ${rhythm(1)} 0 ${rhythm(1)};
 `;
 
 const Product = ({ product }) => (
