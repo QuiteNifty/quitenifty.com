@@ -1,12 +1,12 @@
-import Link from 'gatsby-link';
+// Libs
 import React from 'react';
 import styled from 'styled-components';
+// Styles
 import { color } from '../theme';
 import { rhythm } from '../../utils/typography';
-
 import linkIntact from '../../img/link-intact.svg';
 import beaker from '../../img/beaker.svg';
-
+// Paths
 const imgPath = require.context('../../img', true);
 
 const Icon = styled.svg`
