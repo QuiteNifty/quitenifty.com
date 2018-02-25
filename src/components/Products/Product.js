@@ -25,7 +25,7 @@ const StyledProduct = styled.div`
   }
   @media (max-width: ${bp.narrowTiny}) {
     width: 100%;
-    margin-bottom: ${rhythm(0.25)};
+    margin-bottom: ${rhythm(0.5)};
     text-align: center;
   }
 
@@ -42,7 +42,7 @@ const StyledProduct = styled.div`
     z-index: -1;
 
     @media (max-width: ${bp.narrowTiny}) {
-      border-color: ${color.darkgrey};
+      border-width: 1px;
     }
   }
   &:before {
@@ -51,7 +51,7 @@ const StyledProduct = styled.div`
     border-left: 2px solid ${color.highlight2};
 
     @media (max-width: ${bp.narrowTiny}) {
-      border-color: ${color.darkgrey};
+      border-width: 1px;
     }
   }
 
@@ -61,7 +61,7 @@ const StyledProduct = styled.div`
     border-right: 2px solid ${color.highlight2};
 
     @media (max-width: ${bp.narrowTiny}) {
-      border-color: ${color.darkgrey};
+      border-width: 1px;
     }
   }
 `;

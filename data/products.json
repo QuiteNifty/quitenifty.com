@@ -1,13 +1,5 @@
 [
   {
-    "name": "Kitty Thinks Blog",
-    "url": "https://www.kittythinks.com",
-    "status": "Live",
-    "description": "Concise summaries of important literature",
-    "notes": ["Deployed with and hosted on Netlify", "Built with the Hugo framework"],
-    "logo": "./kittythinks.png"
-  },
-  {
     "name": "Super Detailed",
     "url": null,
     "status": "Coming soon!",
@@ -16,5 +8,13 @@
       "Being built with Express, MongoDB, React, GraphQL, Apollo",
       "Being hosted on Amazon Web Services"
     ]
+  },
+  {
+    "name": "Kitty Thinks Blog",
+    "url": "https://www.kittythinks.com",
+    "status": "Live",
+    "description": "Concise summaries of important literature",
+    "notes": ["Deployed with and hosted on Netlify", "Built with the Hugo framework"],
+    "logo": "./kittythinks.png"
   }
 ]
