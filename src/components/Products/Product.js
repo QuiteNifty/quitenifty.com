@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import * as theme from '../theme';
 import { rhythm } from '../../utils/typography';
 import Status from './Status';
-
 import wrench from '../../img/wrench.svg';
+
 const productPath = require.context('./', true);
-const imgPath = require.context('../../img', true);
 
 const StyledProduct = styled.div`
   position: relative;
-  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   padding: ${rhythm(1.5)};
-  margin-right: ${rhythm(1.5)};
 
   &:before,
   &:after {
@@ -47,15 +47,17 @@ const StyledProductLink = ProductLink.extend`
   }
 `;
 
-const Image = styled.img`
-  display: block;
+const ImageContainer = styled.div`
   width: 100%;
-  max-width: 12rem;
-  height: 100%;
-  max-height: 12rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 20vh;
   margin: 0 auto;
 `;
-const SvgImage = Image.withComponent('svg');
+const ImageImg = styled.img`
+  width: 100%;
+`;
+const SvgImageContainer = ImageContainer.withComponent('svg');
 
 const ProductName = styled.h3`
   margin: ${rhythm(1)} 0 0;
@@ -85,12 +87,20 @@ const Outer = props => {
 
 const Logo = ({ product }) => {
   if (product.logo) {
-    return <Image src={productPath(product.logo, true)} />;
+    const styles = {
+      backgroundImage: 'url(' + productPath(product.logo, true) + ')',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '50%'
+    };
+    return (
+      <ImageContainer style={styles} />
+    );
   } else {
     return (
-      <SvgImage>
+      <SvgImageContainer>
         <use xlinkHref={`#${wrench.id}`} />
-      </SvgImage>
+      </SvgImageContainer>
     );
   }
 };
@@ -105,7 +115,7 @@ const Notes = ({ notes }) => {
       </ul>
     );
   }
-  return <p>no notes</p>;
+  return null;
 };
 
 export default Product;

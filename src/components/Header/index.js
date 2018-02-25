@@ -8,14 +8,14 @@ const headerStyles = {
   display: 'block'
 };
 
+const Logo = styled.img`
+  height: 15vh;
+  margin-bottom: ${rhythm(1)};
+`;
+
 const H1 = styled.h1`
   margin: ${rhythm(1)} 0;
   text-align: center;
-`;
-
-const Logo = styled.img`
-  height: 15vh;
-  margin-bottom: ${rhythm(0.5)};
 `;
 
 const Header = ({ title, url }) => (
