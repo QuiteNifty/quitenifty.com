@@ -1,8 +1,22 @@
+// Libs
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
+import { rhythm } from '../utils/typography';
+// Styles
+import { color, bp } from '../components/theme';
 
-// import './index.css';
+const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 ${rhythm(0.75)} ${rhythm(1)};
+  padding-top: 0;
+
+  @media (max-width: ${bp.narrowMid}) {
+    padding: 0 ${rhythm(0.25)} ${rhythm(1)};
+  }
+`;
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
@@ -10,19 +24,16 @@ const TemplateWrapper = ({ children, data }) => (
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: data.site.siteMetadata.slogan },
-        { name: 'keywords', content: 'quite nifty, superannuation, comparison, super detailed, cheapest super, cheapest superannuation' }
+        {
+          name: 'keywords',
+          content:
+            'quite nifty, superannuation, comparison, super detailed, cheapest super, cheapest superannuation'
+        }
       ]}
     />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0
-      }}
-    >
+    <Wrapper>
       {children()}
-    </div>
+    </Wrapper>
   </div>
 );
 

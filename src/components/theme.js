@@ -5,3 +5,8 @@ export let color = {
   highlight2: '#1F1A1D'
 };
 
+export let bp = {
+  narrowMid: '50em',
+  narrowSmall: '40em',
+  narrowTiny: '32em'
+};

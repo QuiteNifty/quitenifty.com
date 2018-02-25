@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // Styles
-import {color} from '../theme';
+import { color, bp } from '../theme';
 import { rhythm } from '../../utils/typography';
 import wrench from '../../img/wrench.svg';
 // Components
@@ -17,6 +17,19 @@ const StyledProduct = styled.div`
   width: calc(50% - ${rhythm(1)});
   padding: ${rhythm(1.5)};
 
+  @media (max-width: ${bp.narrowMid}) {
+    width: calc(50% - ${rhythm(0.25)});
+  }
+  @media (max-width: ${bp.narrowSmall}) {
+    padding: ${rhythm(0.75)};
+  }
+  @media (max-width: ${bp.narrowTiny}) {
+    width: 100%;
+    margin-bottom: ${rhythm(0.25)};
+    text-align: center;
+  }
+
+  // Borders
   &:before,
   &:after {
     content: '';
@@ -27,17 +40,29 @@ const StyledProduct = styled.div`
     border-top: 2px solid ${color.highlight2};
     border-bottom: 2px solid ${color.highlight2};
     z-index: -1;
+
+    @media (max-width: ${bp.narrowTiny}) {
+      border-color: ${color.darkgrey};
+    }
   }
   &:before {
     top: -2px;
     left: -2px;
     border-left: 2px solid ${color.highlight2};
+
+    @media (max-width: ${bp.narrowTiny}) {
+      border-color: ${color.darkgrey};
+    }
   }
 
   &:after {
     top: -2px;
     right: -2px;
     border-right: 2px solid ${color.highlight2};
+
+    @media (max-width: ${bp.narrowTiny}) {
+      border-color: ${color.darkgrey};
+    }
   }
 `;
 

@@ -24,6 +24,10 @@ const Text = styled.span`
   color: ${color.darkgrey};
 `;
 
+const UrlText = Text.extend`
+  text-decoration: underline;
+`;
+
 const Status = ({ product }) => {
   if (product.url) {
     return (
@@ -31,7 +35,7 @@ const Status = ({ product }) => {
         <Icon>
           <use xlinkHref={`#${linkIntact.id}`} />
         </Icon>
-        <Text>{product.url}</Text>
+        <UrlText>{product.url}</UrlText>
       </div>
     );
   } else {

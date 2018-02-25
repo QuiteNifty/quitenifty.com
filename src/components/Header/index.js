@@ -4,27 +4,45 @@ import styled, { css } from 'styled-components';
 import { rhythm } from '../../utils/typography';
 import logo from './logo-white.png';
 
-const headerStyles = {
-  display: 'block'
-};
-
-const Logo = styled.img`
-  height: 15vh;
-  margin-bottom: ${rhythm(1)};
-`;
-
 const H1 = styled.h1`
   margin: ${rhythm(1)} 0;
   text-align: center;
 `;
 
+const HeaderLink = ({ children, className }) => (
+  <Link className={className} to="/">
+    {children}
+  </Link>
+);
+const StyledLink = styled(HeaderLink)`
+  display: block;
+`;
+
+const Logo = styled.img`
+  margin: 0;
+  height: 15vh;
+  vertical-align: middle;
+`;
+
+const PartialTitle = styled.span`
+  position: relative;
+  z-index: 2;
+  vertical-align: middle;
+`;
+const Quite = PartialTitle.extend`
+  margin-right: -2rem;
+`;
+const Nifty = PartialTitle.extend`
+  margin-left: -2rem;
+`;
+
 const Header = ({ title, url }) => (
   <H1>
-    <Link to="/">
+    <StyledLink>
+      <Quite>Quite</Quite>
       <Logo src={logo} alt="" />
-      <br />
-      {title}
-    </Link>
+      <Nifty>Nifty</Nifty>
+    </StyledLink>
   </H1>
 );
 
