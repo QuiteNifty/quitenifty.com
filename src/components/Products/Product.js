@@ -4,7 +4,6 @@ import styled from 'styled-components';
 // Styles
 import { color, bp } from '../theme';
 import { rhythm } from '../../utils/typography';
-import wrench from '../../img/wrench.svg';
 // Components
 import Status from './Status';
 import Logo from './Logo';

@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 // Styles
 import { bp } from '../theme';
+import wrench from '../../img/wrench.svg';
 // Paths
 const productPath = require.context('./', true);
 
