@@ -1,7 +1,11 @@
+// Libs
 import React from 'react';
 import Link from 'gatsby-link';
 import styled, { css } from 'styled-components';
+// Styles
 import { rhythm } from '../../utils/typography';
+import { bp } from '../theme';
+// Paths
 import logo from './logo-white.png';
 
 const H1 = styled.h1`
@@ -22,6 +26,10 @@ const Logo = styled.img`
   margin: 0;
   height: 15vh;
   vertical-align: middle;
+
+  @media (max-width: ${bp.narrowTiny}) {
+    height: 10vh;
+  }
 `;
 
 const PartialTitle = styled.span`
