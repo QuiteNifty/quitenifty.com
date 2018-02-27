@@ -2,6 +2,7 @@
   {
     "shortName": "Kitty",
     "longName": "Kitty Zschoche",
+    "img": "./kitty.jpg",
     "roles": ["Usability and User Experience", "Product Management"],
     "twitter": {
       "handle": "@meowmuch",
@@ -11,6 +12,7 @@
   {
     "shortName": "Matt",
     "longName": "Matt Schultz",
+    "img": "./matt.jpg",
     "roles": ["Development"],
     "twitter": {
       "handle": "@mttschltz",

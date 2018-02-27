@@ -8,23 +8,12 @@ import { rhythm } from '../../utils/typography';
 import Status from './Status';
 import Logo from './Logo';
 import Notes from './Notes';
+import { SectionItem } from '../styled';
 
-const StyledProduct = styled.div`
+const StyledProduct = SectionItem.extend`
   position: relative;
-  display: flex;
-  flex-direction: column;
-  width: calc(50% - ${rhythm(1)});
-  padding: ${rhythm(1.5)};
-
-  @media (max-width: ${bp.narrowMid}) {
-    width: calc(50% - ${rhythm(0.25)});
-  }
-  @media (max-width: ${bp.narrowSmall}) {
-    padding: ${rhythm(0.75)};
-  }
+  
   @media (max-width: ${bp.narrowTiny}) {
-    width: 100%;
-    margin-bottom: ${rhythm(0.5)};
     text-align: center;
   }
 

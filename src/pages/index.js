@@ -5,7 +5,6 @@ import Company from '../components/Company';
 import People from '../components/People';
 import Products from '../components/Products';
 
-
 const IndexPage = ({ data }) => (
   <div>
     <Header title={data.site.siteMetadata.title} url={data.site.siteMetadata.siteUrl} />
@@ -29,6 +28,7 @@ export const query = graphql`
         node {
           shortName
           longName
+          img
           roles
           twitter {
             handle
