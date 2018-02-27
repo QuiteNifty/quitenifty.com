@@ -1,6 +1,8 @@
 // Libs
 import React from 'react';
 import styled from 'styled-components';
+// Components
+import { SimpleLink } from '../styled';
 // Styles
 import { color } from '../theme';
 import { rhythm } from '../../utils/typography';
@@ -25,7 +27,7 @@ const Text = styled.span`
 `;
 
 const UrlText = Text.extend`
-  text-decoration: underline;
+  ${SimpleLink}
 `;
 
 const Status = ({ product }) => {

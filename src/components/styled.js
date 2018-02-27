@@ -1,8 +1,16 @@
 // Libs
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 // Styles
 import { bp, color } from './theme';
 import { rhythm } from '../utils/typography';
+
+export const SimpleLinkNoColor = css`
+  text-decoration: underline;
+`;
+export const SimpleLink = css`
+  ${SimpleLinkNoColor}
+  color: ${color.darkgrey} !important; // Override :visited
+`;
 
 export const ScreenReaderSpan = styled.span`
   border: 0;

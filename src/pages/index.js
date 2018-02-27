@@ -1,5 +1,7 @@
+// Libs
 import React from 'react';
 import Link from 'gatsby-link';
+// Components
 import Header from '../components/Header';
 import Company from '../components/Company';
 import People from '../components/People';

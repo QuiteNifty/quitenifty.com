@@ -6,7 +6,7 @@ import iconData from '../../img/twitter.svg';
 import { color } from '../theme';
 import { rhythm } from '../../utils/typography';
 // Componenets
-import { ScreenReaderSpan } from '../styled';
+import { ScreenReaderSpan, SimpleLink } from '../styled';
 
 const Label = ScreenReaderSpan.extend``;
 const Icon = styled.svg`
@@ -17,8 +17,7 @@ const Icon = styled.svg`
     color: ${color.darkgrey};
 `;
 const Link = styled.a`
-    color: ${color.darkgrey} !important;
-    text-decoration: underline;
+  ${SimpleLink}
 `;
 
 const Twitter = ({ twitter }) => {
