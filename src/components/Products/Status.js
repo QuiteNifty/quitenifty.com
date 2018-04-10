@@ -26,7 +26,8 @@ const Text = styled.span`
   color: ${color.darkgrey};
 `;
 
-const UrlText = Text.extend`
+const UrlText = Text.withComponent('a');
+const StyledUrlText = UrlText.extend`
   ${SimpleLink}
 `;
 
@@ -37,7 +38,7 @@ const Status = ({ product }) => {
         <Icon>
           <use xlinkHref={`#${linkIntact.id}`} />
         </Icon>
-        <UrlText>{product.url}</UrlText>
+        <StyledUrlText href={product.url}>{product.url}</StyledUrlText>
       </div>
     );
   } else {

@@ -49,6 +49,10 @@ export const query = graphql`
           description
           notes
           logo
+          twitter {
+            handle
+            url
+          }
         }
       }
     }

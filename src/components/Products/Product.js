@@ -9,6 +9,7 @@ import Status from './Status';
 import Logo from './Logo';
 import Notes from './Notes';
 import { SectionItem } from '../styled';
+import Twitter from '../People/Twitter';
 
 const StyledProduct = SectionItem.extend`
   position: relative;
@@ -54,17 +55,8 @@ const StyledProduct = SectionItem.extend`
   }
 `;
 
-const ProductLink = StyledProduct.withComponent('a');
-const StyledProductLink = ProductLink.extend`
-  &:hover:before,
-  &:hover:after {
-    width: 100%;
-    transition: all 0.25s;
-  }
-`;
-
 const ProductName = styled.h3`
-  margin: ${rhythm(1)} 0 0;
+  margin: ${rhythm(1)} 0 ${rhythm(0.5)};
 `;
 
 const Description = styled.p`
@@ -72,21 +64,14 @@ const Description = styled.p`
 `;
 
 const Product = ({ product }) => (
-  <Outer product={product}>
+  <StyledProduct>
     <Logo product={product} />
     <ProductName>{product.name}</ProductName>
     <Status product={product} />
+    <Twitter twitter={product.twitter} />
     <Description>{product.description}</Description>
     <Notes notes={product.notes} />
-  </Outer>
+  </StyledProduct>
 );
-
-const Outer = props => {
-  if (props.product.url) {
-    return <StyledProductLink href={props.product.url}>{props.children}</StyledProductLink>;
-  } else {
-    return <StyledProduct>{props.children}</StyledProduct>;
-  }
-};
 
 export default Product;
