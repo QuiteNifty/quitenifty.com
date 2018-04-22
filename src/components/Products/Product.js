@@ -70,7 +70,6 @@ const Product = ({ product }) => (
     <Status product={product} />
     <Twitter twitter={product.twitter} />
     <Description>{product.description}</Description>
-    <Notes notes={product.notes} />
   </StyledProduct>
 );
 
