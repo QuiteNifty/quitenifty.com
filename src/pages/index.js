@@ -7,8 +7,18 @@ import Company from '../components/Company';
 import People from '../components/People';
 import Products from '../components/Products';
 
+function gaTag() {
+  return {
+    __html:
+      'window.dataLayer = window.dataLayer || [];' +
+      'function gtag(){dataLayer.push(arguments);}' +
+      "gtag('js', new Date());" +
+      "gtag('config', 'UA-117928228-2');"
+  };
+}
 const IndexPage = ({ data }) => (
   <div>
+    <script dangerouslySetInnerHTML={gaTag()} />
     <Header title={data.site.siteMetadata.title} url={data.site.siteMetadata.siteUrl} />
     <Products products={data.allProductsJson.edges} />
     <People people={data.allPeopleJson.edges} />
@@ -57,7 +67,7 @@ export const query = graphql`
       }
     }
     allCompanyJson {
-      edges{
+      edges {
         node {
           name
           email

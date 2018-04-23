@@ -30,10 +30,10 @@ const TemplateWrapper = ({ children, data }) => (
             'quite nifty, superannuation, comparison, super detailed, cheapest super, cheapest superannuation'
         }
       ]}
-    />
-    <Wrapper>
-      {children()}
-    </Wrapper>
+    >
+      <script async={true} src="https://www.googletagmanager.com/gtag/js?id=UA-117928228-2" />
+    </Helmet>
+    <Wrapper>{children()}</Wrapper>
   </div>
 );
 
