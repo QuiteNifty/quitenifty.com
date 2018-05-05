@@ -4,30 +4,29 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.158",
-    "gatsby-link": "^1.6.34",
-    "gatsby-plugin-react-helmet": "^2.0.3",
-    "gatsby-plugin-styled-components": "^2.0.7",
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-svg-sprite": "^1.0.0",
-    "gatsby-plugin-typography": "^1.7.14",
-    "gatsby-source-filesystem": "^1.5.19",
-    "gatsby-transformer-json": "^1.0.14",
+    "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-source-filesystem": "^1.5.35",
+    "gatsby-transformer-json": "^1.0.17",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.1.6",
+    "styled-components": "^3.2.6",
     "typography-theme-st-annes": "^0.15.10"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.10.2"
+    "prettier": "^1.12.0"
   }
 }
