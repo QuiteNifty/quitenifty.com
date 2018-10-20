@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Person from './Person';
 import { SectionContainer, SectionHeading } from '../styled';
 
-const StyledPeople = SectionContainer.extend``;
+const StyledPeople = styled(SectionContainer)``;
 
 const People = props => (
   <div>

@@ -10,5 +10,5 @@ stAnnesTheme.overrideThemeStyles = ({ rhythm }, options) => ({
 });
 
 const typography = new Typography(stAnnesTheme);
-
-export default typography;
+const { rhythm, scale } = typography;
+export { rhythm, scale, typography as default };

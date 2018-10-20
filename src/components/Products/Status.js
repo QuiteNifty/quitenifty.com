@@ -6,28 +6,22 @@ import { SimpleLink } from '../styled';
 // Styles
 import { color } from '../theme';
 import { rhythm } from '../../utils/typography';
-import linkIntact from '../../img/link-intact.svg';
-import beaker from '../../img/beaker.svg';
-// Paths
-const imgPath = require.context('../../img', true);
+import LinkIntact from '../../img/link-intact.svg';
+import Beaker from '../../img/beaker.svg';
 
-const Icon = styled.svg`
-  width: 0.8rem;
-  height: 0.8rem;
-  margin: 0 ${rhythm(0.25)} 0 0;
-  vertical-align: middle;
-
-  > use {
-    fill: ${color.darkgrey};
-  }
-`;
+const iconStyle = {
+  width: '0.8rem',
+  height: '0.8rem',
+  margin: `0 ${rhythm(0.25)} 0 0`,
+  verticalAlign: 'middle'
+};
 
 const Text = styled.span`
   color: ${color.darkgrey};
 `;
 
 const UrlText = Text.withComponent('a');
-const StyledUrlText = UrlText.extend`
+const StyledUrlText = styled(UrlText)`
   ${SimpleLink}
 `;
 
@@ -35,18 +29,14 @@ const Status = ({ product }) => {
   if (product.url) {
     return (
       <div>
-        <Icon>
-          <use xlinkHref={`#${linkIntact.id}`} />
-        </Icon>
+        <LinkIntact style={iconStyle} fill={color.darkgrey} />
         <StyledUrlText href={product.url}>{product.url}</StyledUrlText>
       </div>
     );
   } else {
     return (
       <div>
-        <Icon>
-          <use xlinkHref={`#${beaker.id}`} />
-        </Icon>
+        <Beaker style={iconStyle} fill={color.darkgrey} />
         <Text>{product.status}</Text>
       </div>
     );

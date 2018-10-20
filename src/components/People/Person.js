@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // Styles
-import { color, bp } from '../theme';
+import { bp } from '../theme';
 import { rhythm } from '../../utils/typography';
 // Components
 import { SectionItem } from '../styled';
@@ -10,7 +10,7 @@ import Twitter from './Twitter';
 // Paths
 const imgPath = require.context('../../img', true);
 
-const StyledPerson = SectionItem.extend`
+const StyledPerson = styled(SectionItem)`
   // Element has no border so looks like more space between this and heading
   padding-top: 0 !important;
   padding-bottom: 0 !important;

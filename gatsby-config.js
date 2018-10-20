@@ -21,6 +21,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-svg-sprite'
+    'gatsby-plugin-react-svg'
   ]
 };

@@ -1,7 +1,7 @@
 // Libs
 import React from 'react';
-import Link from 'gatsby-link';
-import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 // Styles
 import { rhythm } from '../../utils/typography';
 import { bp } from '../theme';
@@ -37,10 +37,10 @@ const PartialTitle = styled.span`
   z-index: 2;
   vertical-align: middle;
 `;
-const Quite = PartialTitle.extend`
+const Quite = styled(PartialTitle)`
   margin-right: -2rem;
 `;
-const Nifty = PartialTitle.extend`
+const Nifty = styled(PartialTitle)`
   margin-left: -2rem;
 `;
 

@@ -1,13 +1,11 @@
 // Libs
 import React from 'react';
 import styled from 'styled-components';
-// Styles
-import { bp } from '../theme';
 // Components
 import Product from './Product';
 import { SectionContainer, SectionHeading } from '../styled';
 
-const ProductContainer = SectionContainer.extend``;
+const ProductContainer = styled(SectionContainer)``;
 
 const Products = props => (
   <div>
@@ -17,15 +15,5 @@ const Products = props => (
     </ProductContainer>
   </div>
 );
-
-const allValues = arg => {
-  let str = '';
-  for (let key in arg) {
-    if (arg.hasOwnProperty(key)) {
-      str += key + ',' + arg[key];
-    }
-  }
-  return str;
-};
 
 export default Products;

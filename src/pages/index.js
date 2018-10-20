@@ -1,7 +1,8 @@
 // Libs
 import React from 'react';
-import Link from 'gatsby-link';
 // Components
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 import Header from '../components/Header';
 import Company from '../components/Company';
 import People from '../components/People';
@@ -17,13 +18,13 @@ function gaTag() {
   };
 }
 const IndexPage = ({ data }) => (
-  <div>
+  <Layout>
     <script dangerouslySetInnerHTML={gaTag()} />
     <Header title={data.site.siteMetadata.title} url={data.site.siteMetadata.siteUrl} />
     <Products products={data.allProductsJson.edges} />
     <People people={data.allPeopleJson.edges} />
     <Company company={data.allCompanyJson.edges[0].node} />
-  </div>
+  </Layout>
 );
 
 export const query = graphql`

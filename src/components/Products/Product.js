@@ -7,11 +7,10 @@ import { rhythm } from '../../utils/typography';
 // Components
 import Status from './Status';
 import Logo from './Logo';
-import Notes from './Notes';
 import { SectionItem } from '../styled';
 import Twitter from '../People/Twitter';
 
-const StyledProduct = SectionItem.extend`
+const StyledProduct = styled(SectionItem)`
   position: relative;
   
   @media (max-width: ${bp.narrowTiny}) {
