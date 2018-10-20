@@ -22,7 +22,9 @@ const EmailLink = styled.a`
 `;
 const Phone = styled.div``;
 const PhoneLabel = styled.span``;
-const PhoneNumber = styled.span``;
+const PhoneNumber = styled.a`
+  ${SimpleLinkNoColor}
+`;
 
 const Company = ({ company }) => (
   <div>
@@ -35,9 +37,9 @@ const Company = ({ company }) => (
       })}
       </PostalAddress>
       <Email>
-        <EmailLink href="mailto:{company.email}">{company.email}</EmailLink>
+        <EmailLink href={"mailto:" + company.email}>{company.email}</EmailLink>
       </Email>
-      <Phone><PhoneLabel>Phone: </PhoneLabel><PhoneNumber>{company.phone}</PhoneNumber></Phone>
+      <Phone><PhoneLabel>Phone: </PhoneLabel><PhoneNumber href={"tel:" + company.phone.replace(/\s+/g, '')}>{company.phone}</PhoneNumber></Phone>
     </Address>
   </div>
 );
