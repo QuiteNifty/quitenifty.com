@@ -1,9 +1,9 @@
 // Libs
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 // Styles
-import { bp, color } from '../theme';
-import { rhythm } from '../../utils/typography';
+import { bp, color } from '../theme'
+import { rhythm } from '../../utils/typography'
 
 const StyledNotes = styled.ul`
   margin: 0 0 0 1em;
@@ -17,19 +17,19 @@ const StyledNotes = styled.ul`
   @media (max-width: ${bp.narrowTiny}) {
     list-style-position: inside;
   }
-`;
+`
 
 const Notes = ({ notes }) => {
   if (notes && notes.length > 0) {
     return (
       <StyledNotes>
         {notes.map((note, index) => {
-          return <li key={index}>{note}</li>;
+          return <li key={index}>{note}</li>
         })}
       </StyledNotes>
-    );
+    )
   }
-  return null;
-};
+  return null
+}
 
-export default Notes;
+export default Notes

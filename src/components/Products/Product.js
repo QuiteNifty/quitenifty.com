@@ -1,18 +1,18 @@
 // Libs
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 // Styles
-import { color, bp } from '../theme';
-import { rhythm } from '../../utils/typography';
+import { color, bp } from '../theme'
+import { rhythm } from '../../utils/typography'
 // Components
-import Status from './Status';
-import Logo from './Logo';
-import { SectionItem } from '../styled';
-import Twitter from '../People/Twitter';
+import Status from './Status'
+import Logo from './Logo'
+import { SectionItem } from '../styled'
+import Twitter from '../People/Twitter'
 
 const StyledProduct = styled(SectionItem)`
   position: relative;
-  
+
   @media (max-width: ${bp.narrowTiny}) {
     text-align: center;
   }
@@ -52,15 +52,15 @@ const StyledProduct = styled(SectionItem)`
       border-width: 1px;
     }
   }
-`;
+`
 
 const ProductName = styled.h3`
   margin: ${rhythm(1)} 0 ${rhythm(0.5)};
-`;
+`
 
 const Description = styled.p`
   margin: ${rhythm(1)} 0 ${rhythm(1)};
-`;
+`
 
 const Product = ({ product }) => (
   <StyledProduct>
@@ -70,6 +70,6 @@ const Product = ({ product }) => (
     <Twitter twitter={product.twitter} />
     <Description>{product.description}</Description>
   </StyledProduct>
-);
+)
 
-export default Product;
+export default Product

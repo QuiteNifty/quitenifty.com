@@ -1,14 +1,14 @@
 // Libs
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 // Styles
-import { bp } from '../theme';
-import { rhythm } from '../../utils/typography';
+import { bp } from '../theme'
+import { rhythm } from '../../utils/typography'
 // Components
-import { SectionItem } from '../styled';
-import Twitter from './Twitter';
+import { SectionItem } from '../styled'
+import Twitter from './Twitter'
 // Paths
-const imgPath = require.context('../../img', true);
+const imgPath = require.context('../../img', true)
 
 const StyledPerson = styled(SectionItem)`
   // Element has no border so looks like more space between this and heading
@@ -21,17 +21,17 @@ const StyledPerson = styled(SectionItem)`
       margin-top: ${rhythm(1)};
     }
   }
-`;
+`
 
 const Image = styled.img`
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   margin: 0 auto;
   max-height: 40vh;
-`;
+`
 
 const Name = styled.h3`
   margin: ${rhythm(0.5)} 0 0;
-`;
+`
 
 const Roles = styled.ul`
   list-style: none;
@@ -44,7 +44,7 @@ const Roles = styled.ul`
   @media (max-width: ${bp.narrowTiny}) {
     margin: ${rhythm(0.5)} 0 0;
   }
-`;
+`
 
 const Person = ({ person }) => (
   <StyledPerson>
@@ -53,10 +53,10 @@ const Person = ({ person }) => (
     <Twitter twitter={person.twitter} />
     <Roles>
       {person.roles.map((role, index) => {
-        return <li key={index}>{role}</li>;
+        return <li key={index}>{role}</li>
       })}
     </Roles>
   </StyledPerson>
-);
+)
 
-export default Person;
+export default Person

@@ -1,16 +1,16 @@
 // Libs
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components'
 // Styles
-import { bp, color } from './theme';
-import { rhythm } from '../utils/typography';
+import { bp, color } from './theme'
+import { rhythm } from '../utils/typography'
 
 export const SimpleLinkNoColor = css`
   text-decoration: underline;
-`;
+`
 export const SimpleLink = css`
   ${SimpleLinkNoColor}
   color: ${color.darkgrey} !important; // Override :visited
-`;
+`
 
 export const ScreenReaderSpan = styled.span`
   border: 0;
@@ -23,7 +23,7 @@ export const ScreenReaderSpan = styled.span`
   position: absolute !important;
   width: 1px;
   word-wrap: normal !important;
-`;
+`
 
 export const SectionHeading = styled.h2`
   display: block;
@@ -34,7 +34,7 @@ export const SectionHeading = styled.h2`
     border-bottom: 0;
     text-align: center;
   }
-`;
+`
 
 export const SectionContainer = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ export const SectionContainer = styled.div`
   @media (max-width: ${bp.narrowTiny}) {
     flex-wrap: wrap;
   }
-`;
+`
 
 export const SectionItem = styled.div`
   display: flex;
@@ -61,4 +61,4 @@ export const SectionItem = styled.div`
     width: 100%;
     margin-bottom: ${rhythm(1)};
   }
-`;
+`
