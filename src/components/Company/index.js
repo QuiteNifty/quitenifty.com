@@ -1,30 +1,30 @@
 // Libs
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 // Styles
-import { rhythm } from '../../utils/typography'
+import { rhythm } from '../../utils/typography';
 // Components
-import { SectionHeading, SimpleLinkNoColor } from '../styled'
+import { SectionHeading, SimpleLinkNoColor } from '../styled';
 
 const Address = styled.address`
   font-style: normal;
-`
-const Name = styled.div``
+`;
+const Name = styled.div``;
 const PostalAddress = styled.div`
   margin-bottom: ${rhythm(0.5)};
-`
+`;
 const PostalAddressLine = styled.span`
   display: block;
-`
-const Email = styled.div``
+`;
+const Email = styled.div``;
 const EmailLink = styled.a`
   ${SimpleLinkNoColor};
-`
-const Phone = styled.div``
-const PhoneLabel = styled.span``
+`;
+const Phone = styled.div``;
+const PhoneLabel = styled.span``;
 const PhoneNumber = styled.a`
   ${SimpleLinkNoColor};
-`
+`;
 
 const Company = ({ company }) => (
   <div>
@@ -33,7 +33,7 @@ const Company = ({ company }) => (
       <Name>{company.name}</Name>
       <PostalAddress>
         {company.address.map(line => {
-          return <PostalAddressLine>{line}</PostalAddressLine>
+          return <PostalAddressLine>{line}</PostalAddressLine>;
         })}
       </PostalAddress>
       <Email>
@@ -47,6 +47,6 @@ const Company = ({ company }) => (
       </Phone>
     </Address>
   </div>
-)
+);
 
-export default Company
+export default Company;

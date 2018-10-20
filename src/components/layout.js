@@ -1,11 +1,11 @@
 // Libs
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
-import styled from 'styled-components'
-import { rhythm } from '../utils/typography'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
+import { rhythm } from '../utils/typography';
 // Styles
-import { bp } from '../components/theme'
+import { bp } from '../components/theme';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   @media (max-width: ${bp.narrowMid}) {
     padding: 0 ${rhythm(0.25)} ${rhythm(1)};
   }
-`
+`;
 
 export default ({ children }) => (
   <StaticQuery
@@ -52,4 +52,4 @@ export default ({ children }) => (
       </div>
     )}
   />
-)
+);

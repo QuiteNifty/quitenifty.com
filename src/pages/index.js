@@ -1,12 +1,12 @@
 // Libs
-import React from 'react'
+import React from 'react';
 // Components
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Header from '../components/Header'
-import Company from '../components/Company'
-import People from '../components/People'
-import Products from '../components/Products'
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Header from '../components/Header';
+import Company from '../components/Company';
+import People from '../components/People';
+import Products from '../components/Products';
 
 function gaTag() {
   return {
@@ -15,7 +15,7 @@ function gaTag() {
       'function gtag(){dataLayer.push(arguments);}' +
       "gtag('js', new Date());" +
       "gtag('config', 'UA-117928228-2');",
-  }
+  };
 }
 const IndexPage = ({ data }) => (
   <Layout>
@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => (
     <People people={data.allPeopleJson.edges} />
     <Company company={data.allCompanyJson.edges[0].node} />
   </Layout>
-)
+);
 
 export const query = graphql`
   query IndexQuery {
@@ -81,6 +81,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

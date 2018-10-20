@@ -1,11 +1,11 @@
 // Libs
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 // Components
-import Product from './Product'
-import { SectionContainer, SectionHeading } from '../styled'
+import Product from './Product';
+import { SectionContainer, SectionHeading } from '../styled';
 
-const ProductContainer = styled(SectionContainer)``
+const ProductContainer = styled(SectionContainer)``;
 
 const Products = props => (
   <div>
@@ -16,6 +16,6 @@ const Products = props => (
       ))}
     </ProductContainer>
   </div>
-)
+);
 
-export default Products
+export default Products;
