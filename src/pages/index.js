@@ -24,9 +24,9 @@ const IndexPage = ({ data }) => (
       title={data.site.siteMetadata.title}
       url={data.site.siteMetadata.siteUrl}
     />
-    <Products products={data.allProductsJson.edges} />
-    <People people={data.allPeopleJson.edges} />
     <Company company={data.allCompanyJson.edges[0].node} />
+    {/* <Products products={data.allProductsJson.edges} /> */}
+    <People people={data.allPeopleJson.edges} />
   </Layout>
 );
 
@@ -51,6 +51,11 @@ export const query = graphql`
             url
           }
           linkedin
+          websites {
+            title
+            description
+            url
+          }
         }
       }
     }

@@ -7,6 +7,8 @@ import { rhythm } from '../../utils/typography';
 // Components
 import { SectionItem } from '../styled';
 import Twitter from './Twitter';
+import LinkedIn from './LinkedIn';
+import Website from './Website';
 // Paths
 const imgPath = require.context('../../img', true);
 
@@ -51,11 +53,10 @@ const Person = ({ person }) => (
     <Image src={imgPath(person.img, true)} />
     <Name>{person.shortName}</Name>
     <Twitter twitter={person.twitter} />
-    <Roles>
-      {person.roles.map((role, index) => {
-        return <li key={index}>{role}</li>;
-      })}
-    </Roles>
+    {person.websites && person.websites.map(w => {
+      return <Website website={w} />
+    })}
+    <LinkedIn linkedin={person.linkedin} />
   </StyledPerson>
 );
 

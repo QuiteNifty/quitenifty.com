@@ -8,6 +8,7 @@ import { SectionHeading, SimpleLinkNoColor } from '../styled';
 
 const Address = styled.address`
   font-style: normal;
+  text-align: center;
 `;
 const Name = styled.div``;
 const PostalAddress = styled.div`
@@ -28,23 +29,10 @@ const PhoneNumber = styled.a`
 
 const Company = ({ company }) => (
   <div>
-    <SectionHeading>Company</SectionHeading>
     <Address>
-      <Name>{company.name}</Name>
-      <PostalAddress>
-        {company.address.map(line => {
-          return <PostalAddressLine>{line}</PostalAddressLine>;
-        })}
-      </PostalAddress>
       <Email>
         <EmailLink href={'mailto:' + company.email}>{company.email}</EmailLink>
       </Email>
-      <Phone>
-        <PhoneLabel>Phone: </PhoneLabel>
-        <PhoneNumber href={'tel:' + company.phone.replace(/\s+/g, '')}>
-          {company.phone}
-        </PhoneNumber>
-      </Phone>
     </Address>
   </div>
 );

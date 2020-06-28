@@ -9,7 +9,7 @@ import { bp } from '../theme';
 import logo from './logo-white.png';
 
 const H1 = styled.h1`
-  margin: ${rhythm(1)} 0;
+  margin: ${rhythm(1)} 0 ${rhythm(0.5)};
   text-align: center;
 `;
 

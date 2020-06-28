@@ -7,7 +7,14 @@
     "twitter": {
       "handle": "@kittythinks",
       "url": "https://twitter.com/kittythinks"
-    }
+    },
+    "websites": [
+      {
+        "title": "Kitty Thinks",
+        "description": "Concise summaries of important literature",
+        "url": "https://www.kittythinks.com"
+      }
+    ]
   },
   {
     "shortName": "Matt",
@@ -18,6 +25,7 @@
       "handle": "@mttschltz",
       "url": "https://twitter.com/mttschltz"
     },
-    "linkedin": "https://www.linkedin.com/in/mttschltz/"
+    "linkedin": "https://www.linkedin.com/in/mttschltz/",
+    "websites": []
   }
 ]
