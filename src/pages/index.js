@@ -25,8 +25,8 @@ const IndexPage = ({ data }) => (
       url={data.site.siteMetadata.siteUrl}
     />
     <Company company={data.allCompanyJson.edges[0].node} />
-    {/* <Products products={data.allProductsJson.edges} /> */}
     <People people={data.allPeopleJson.edges} />
+    <Products products={data.allProductsJson.edges} />
   </Layout>
 );
 
@@ -63,15 +63,8 @@ export const query = graphql`
       edges {
         node {
           name
-          url
-          status
+          embedURL
           description
-          notes
-          logo
-          twitter {
-            handle
-            url
-          }
         }
       }
     }

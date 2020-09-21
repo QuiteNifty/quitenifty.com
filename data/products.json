@@ -1,29 +1,7 @@
 [
   {
-    "name": "Superverse",
-    "url": "https://www.superverse.com.au",
-    "status": "Coming soon!",
-    "description": "A better Superannuation comparison service",
-    "notes": [
-      "Being built with Express, MongoDB, React, GraphQL, Apollo",
-      "Being hosted on Amazon Web Services"
-    ],
-    "logo": "./superverse.png",
-    "twitter": {
-      "handle": "@SuperverseAU",
-      "url": "https://twitter.com/SuperverseAU"
-    }
-  },
-  {
-    "name": "Kitty Thinks",
-    "url": "https://www.kittythinks.com",
-    "status": "Live",
-    "description": "Concise summaries of important literature",
-    "notes": ["Deployed with and hosted on Netlify", "Built with the Hugo framework"],
-    "logo": "./kittythinks.png",
-    "twitter": {
-      "handle": "@kittythinks",
-      "url": "https://twitter.com/kittythinks"
-    }
+    "name": "Voice to Video",
+    "embedURL": "https://www.youtube.com/embed/1j9mVZSIVwI",
+    "description": "Switch from a phone call to video chat in seconds."
   }
 ]
