@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
     />
     <Company company={data.allCompanyJson.edges[0].node} />
     <People people={data.allPeopleJson.edges} />
-    <Products products={data.allProductsJson.edges} />
+    {/* <Products products={data.allProductsJson.edges} /> */}
   </Layout>
 );
 

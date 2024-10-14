@@ -52,11 +52,11 @@ const Person = ({ person }) => (
   <StyledPerson>
     <Image src={imgPath(person.img, true)} />
     <Name>{person.shortName}</Name>
-    <Twitter twitter={person.twitter} />
-    {person.websites && person.websites.map(w => {
+    {/* <Twitter twitter={person.twitter} /> */}
+    {/* {person.websites && person.websites.map(w => {
       return <Website website={w} />
-    })}
-    <LinkedIn linkedin={person.linkedin} />
+    })} */}
+    {/* <LinkedIn linkedin={person.linkedin} /> */}
   </StyledPerson>
 );
 
